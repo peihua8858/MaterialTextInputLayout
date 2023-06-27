@@ -48,8 +48,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.peihua8858'
-                artifactId = 'kotlinCommonUtils'
-                version = '1.0.27'
+                artifactId = 'TextInputLayout'
+                version = '1.0.0'
             }
         }
     }
