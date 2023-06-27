@@ -1,2 +1,4 @@
-include ':app', ':ui'
-rootProject.name='CustomTextInputLayout'
+//include ':app'
+//include ':ui'
+rootProject.name = 'MaterialTextInputLayout'
+include ':library'
