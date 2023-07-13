@@ -18,6 +18,7 @@
 <resources>
     <public name="textInputStyle" type="attr" />
     <public name="hideHintCutout" type="attr" />
+    <public name="hintErrorEnabled" type="attr" />
     <public name="boxBackgroundColor" type="attr" />
     <public name="boxBackgroundMode" type="attr" />
     <public name="boxCollapsedPaddingTop" type="attr" />

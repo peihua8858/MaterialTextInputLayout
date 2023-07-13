@@ -304,6 +304,8 @@ public class TextInputLayout extends LinearLayout {
     private final int boxLabelCutoutPaddingPx;
     //是否隐藏缺口
     private final boolean hideHintCutout;
+    //显示错误时，暗纹颜色是否与错误颜色一致，true表示一直，false 则保持不变
+    private boolean isHintErrorEnabled;
     private boolean isFixedExpand;
     @BoxBackgroundMode
     private int boxBackgroundMode;
@@ -544,6 +546,7 @@ public class TextInputLayout extends LinearLayout {
                 ShapeAppearanceModel.builder(context, attrs, defStyleAttr, DEF_STYLE_RES).build();
         isFixedExpand = a.getBoolean(R.styleable.TextInputLayout_isFixedExpand, false);
         hideHintCutout = a.getBoolean(R.styleable.TextInputLayout_hideHintCutout, true);
+        isHintErrorEnabled = a.getBoolean(R.styleable.TextInputLayout_hintErrorEnabled, true);
         boxLabelCutoutPaddingPx =
                 context
                         .getResources()
@@ -1656,8 +1659,10 @@ public class TextInputLayout extends LinearLayout {
             collapsingTextHelper.setCollapsedAndExpandedTextColor(
                     ColorStateList.valueOf(disabledHintColor));
         } else if (shouldShowError()) {
-            collapsingTextHelper.setCollapsedAndExpandedTextColor(
-                    indicatorViewController.getErrorViewTextColors());
+            if (isHintErrorEnabled()) {
+                collapsingTextHelper.setCollapsedAndExpandedTextColor(
+                        indicatorViewController.getErrorViewTextColors());
+            }
         } else if (counterOverflowed && counterView != null) {
             collapsingTextHelper.setCollapsedAndExpandedTextColor(counterView.getTextColors());
         } else if (hasFocus && focusedTextColor != null) {
@@ -3000,6 +3005,14 @@ public class TextInputLayout extends LinearLayout {
 
     public boolean shouldShowError() {
         return indicatorViewController.errorShouldBeShown();
+    }
+
+    public void setHintErrorEnabled(boolean isEnabled) {
+        isHintErrorEnabled = isEnabled;
+    }
+
+    public boolean isHintErrorEnabled() {
+        return isHintErrorEnabled;
     }
 
     static class SavedState extends AbsSavedState {

@@ -92,8 +92,12 @@
     <!--    <attr name="boxLabelCutoutPaddingTopPx" format="dimension"/>&ndash;&gt;-->
     <!--  </declare-styleable>-->
     <declare-styleable name="TextInputLayout">
+        <!-- 是否固定展开暗纹 -->
         <attr name="isFixedExpand" format="boolean" />
+        <!-- 是否隐藏缺口 -->
         <attr name="hideHintCutout" format="boolean" />
+        <!-- 显示错误时，暗纹颜色是否与错误颜色一致，true表示一直，false 则保持不变 -->
+        <attr name="hintErrorEnabled" format="boolean" />
         <!-- The text color for input text. -->
         <attr name="android:textColorHint" />
         <!-- The hint to display in the floating label. -->

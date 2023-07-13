@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <com.peihua.inputlayout.textfield.TextInputLayout
+        android:id="@+id/text_input_layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -23,18 +24,20 @@
         app:boxStrokeColor="@color/input_stroke"
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="1dp"
+        app:errorTextAppearance="@style/TextAppearance.Design.Error"
         app:hideHintCutout="true"
         app:hintEnabled="true"
+        app:hintErrorEnabled="false"
         app:hintTextAppearance="@style/TextAppearance.Design.Hint">
 
         <com.peihua.inputlayout.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@null"
             android:paddingStart="16dp"
-            android:paddingTop="28dp"
-            android:paddingBottom="16dp"
-            android:singleLine="true" />
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:textSize="12sp" />
     </com.peihua.inputlayout.textfield.TextInputLayout>
 
     <com.peihua.inputlayout.textfield.TextInputLayout
@@ -68,7 +71,6 @@
             android:background="@null"
             android:paddingStart="24dp"
             android:paddingTop="16dp"
-            android:paddingBottom="8dp"
             android:singleLine="true"
             android:textSize="12sp" />
     </com.peihua.inputlayout.textfield.TextInputLayout>
@@ -94,8 +96,8 @@
         app:hideHintCutout="true"
         app:hintAnimationEnabled="false"
         app:hintEnabled="true"
-        app:isFixedExpand="true"
-        app:hintTextAppearance="@style/TextAppearance.Design.Hint">
+        app:hintTextAppearance="@style/TextAppearance.Design.Hint"
+        app:isFixedExpand="true">
 
         <com.peihua.inputlayout.textfield.TextInputEditText
             android:layout_width="match_parent"
