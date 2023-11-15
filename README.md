@@ -5,9 +5,6 @@
 也就是说，它提供了一个具有概述的“EditText”的组件
 提示和错误，但不剪掉边框。
 
-**请注意**只有`TextInputLayout`和`TextInputEditText`是
-支持的。
-
 [![Jitpack](https://jitpack.io/v/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/peihua8858)
 [![Star](https://img.shields.io/github/stars/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858/TextInputLayout)
@@ -70,6 +67,8 @@ dependencies {
     app:boxStrokeWidth="0dp"
     app:boxStrokeWidthFocused="1dp"
     app:hintEnabled="true"
+    app:hideHintCutout="true"
+    app:hintErrorEnabled="true"
     app:hintPaddingTop="12dp"
     app:hintTextAppearance="@style/TextAppearance.Design.Hint">
 
