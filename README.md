@@ -1,27 +1,27 @@
-:heartpulse:**TextInputLayout**:heartpulse:
+:heartpulse:**MaterialTextInputLayout**:heartpulse:
 
-**TextInputLayout** 是一个提供修改后的 `TextInputLayout` 的库
+**MaterialTextInputLayout** 是一个提供修改后的 `TextInputLayout` 的库
 来自 Google 的 [[Android 材料组件](https://github.com/material-components/material-components-android)]。
 也就是说，它提供了一个具有概述的“EditText”的组件
 提示和错误，但不剪掉边框。
 
-[![Jitpack](https://jitpack.io/v/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858)
+[![Jitpack](https://jitpack.io/v/peihua8858/MaterialTextInputLayout.svg)](https://github.com/peihua8858)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/peihua8858)
-[![Star](https://img.shields.io/github/stars/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858/TextInputLayout)
+[![Star](https://img.shields.io/github/stars/peihua8858/MaterialTextInputLayout.svg)](https://github.com/peihua8858/MaterialTextInputLayout)
 
 
 ## 目录
--[最新版本](https://github.com/peihua8858/TextInputLayout/releases/tag/1.0.0-beta2)<br>
+-[最新版本](https://github.com/peihua8858/MaterialTextInputLayout/releases/tag/1.0.0)<br>
 -[如何引用](#如何引用)<br>
 -[进阶使用](#进阶使用)<br>
--[如何提Issues](https://github.com/peihua8858/TextInputLayout/wiki/%E5%A6%82%E4%BD%95%E6%8F%90Issues%3F)<br>
+-[如何提Issues](https://github.com/peihua8858/MaterialTextInputLayout/wiki/%E5%A6%82%E4%BD%95%E6%8F%90Issues%3F)<br>
 -[License](#License)<br>
 
 
 ## 如何引用
 
 * 把 `maven { url 'https://jitpack.io' }` 加入到 repositories 中
-* 添加如下依赖，末尾的「latestVersion」指的是TextInputLayout [![Download](https://jitpack.io/v/peihua8858/TextInputLayout.svg)](https://jitpack.io/#peihua8858/TextInputLayout) 里的版本名称，请自行替换。
+* 添加如下依赖，末尾的「latestVersion」指的是MaterialTextInputLayout [![Download](https://jitpack.io/v/peihua8858/MaterialTextInputLayout.svg)](https://jitpack.io/#peihua8858/MaterialTextInputLayout) 里的版本名称，请自行替换。
 
 使用 Gradle
 
@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.peihua8858:TextInputLayout:${latestVersion}'
+    implementation 'com.github.peihua8858:MaterialTextInputLayout:${latestVersion}'
 }
 ```
 
@@ -41,7 +41,7 @@ dependencies {
 ```xml
 <dependency>
   <groupId>com.github.peihua8858</groupId>
-  <artifactId>TextInputLayout</artifactId>
+  <artifactId>MaterialTextInputLayout</artifactId>
   <version>${latestVersion}</version>
 </dependency>
 ```
