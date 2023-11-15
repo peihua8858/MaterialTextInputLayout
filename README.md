@@ -1,24 +1,58 @@
-# TextInputLayout
+:heartpulse:TextInputLayout:heartpulse:
 
-[ ![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.ackeecz/TextInputLayout/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.ackeecz/TextInputLayout)
+**TextInputLayout** 是一个提供修改后的 `TextInputLayout` 的库
+来自 Google 的 [[Android 材料组件](https://github.com/material-components/material-components-android)]。
+也就是说，它提供了一个具有概述的“EditText”的组件
+提示和错误，但不剪掉边框。
 
-**TextInputLayout** is a library that provides a modified `TextInputLayout`
-from Google's [Material Components for Android](
-https://github.com/material-components/material-components-android).
-Namely, it provides a component that has an outlined `EditText` with
-hint and error, but does not cut out the border.
+**请注意**只有`TextInputLayout`和`TextInputEditText`是
+支持的。
 
-**Please note** that only `TextInputLayout` and `TextInputEditText` are
-supported.
+[![Jitpack](https://jitpack.io/v/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/peihua8858)
+[![Star](https://img.shields.io/github/stars/peihua8858/TextInputLayout.svg)](https://github.com/peihua8858/TextInputLayout)
 
-## Preview
 
-![sample](./assets/sample.png)
+## 目录
+-[最新版本](https://github.com/peihua8858/TextInputLayout/releases/tag/1.0.0-beta2)<br>
+-[如何引用](#如何引用)<br>
+-[进阶使用](#进阶使用)<br>
+-[如何提Issues](https://github.com/peihua8858/TextInputLayout/wiki/%E5%A6%82%E4%BD%95%E6%8F%90Issues%3F)<br>
+-[License](#License)<br>
 
-### Example usage
 
+## 如何引用
+
+* 把 `maven { url 'https://jitpack.io' }` 加入到 repositories 中
+* 添加如下依赖，末尾的「latestVersion」指的是TextInputLayout [![Download](https://jitpack.io/v/peihua8858/TextInputLayout.svg)](https://jitpack.io/#peihua8858/TextInputLayout) 里的版本名称，请自行替换。
+
+使用 Gradle
+
+```sh
+repositories {
+  google()
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.peihua8858:TextInputLayout:${latestVersion}'
+}
+```
+
+或 Maven:
+
+```xml
+<dependency>
+  <groupId>com.github.peihua8858</groupId>
+  <artifactId>TextInputLayout</artifactId>
+  <version>${latestVersion}</version>
+</dependency>
+```
+
+## 进阶使用
+### 1、xml 布局引入
 ```XML
-<io.github.ackeecz.ui.textfield.TextInputLayout
+<com.peihua.inputlayout.textfield.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
@@ -39,7 +73,7 @@ supported.
     app:hintPaddingTop="12dp"
     app:hintTextAppearance="@style/TextAppearance.Design.Hint">
 
-    <io.github.ackeecz.ui.textfield.TextInputEditText
+    <com.peihua.inputlayout.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
@@ -47,8 +81,36 @@ supported.
         android:paddingTop="28dp"
         android:paddingBottom="16dp"
         android:singleLine="true" />
-</io.github.ackeecz.ui.textfield.TextInputLayout>
+</com.peihua.inputlayout.textfield.TextInputLayout>
 ```
+### 2、 自定义属性说明
+仅对新增属性说明，其他请查看Google 的 [[Android TextInputLayout](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textfield/res/values/attrs.xml)]
+属性名 | 说明 | 默认值
+:----------- | :----------- | :-----------
+isFixedExpand         | 是否固定展开暗纹        | false
+hideHintCutout         | 是否隐藏缺口        | true
+hintErrorEnabled         | 显示错误时，暗纹颜色是否与错误颜色一致，true表示一直，false 则保持不变        | true
 
-### Download
-Include it in your project with  `implementation io.github.ackeecz:TextInputLayout:1.1.0`
+## 演示效果
+
+|          示例        | 
+|:----------------------:|
+| ![](assets/sample.png) |
+
+## License
+
+```sh
+Copyright 2023 peihua
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
